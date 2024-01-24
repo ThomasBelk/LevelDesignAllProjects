@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,17 +8,19 @@ public class PlayerController : MonoBehaviour
     private float yRotation = -90f;
     private float xRotation = 0f;
     private float height;
+    private Rigidbody rb;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         height = transform.position.y;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        rb.velocity = Vector3.zero;
         Vector3 newPos = transform.position;
 
         if (Input.GetKey(KeyCode.W))
