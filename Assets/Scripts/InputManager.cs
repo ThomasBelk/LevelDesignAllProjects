@@ -8,9 +8,12 @@ public class InputManager : MonoBehaviour
     private PlayerInput playerInput;
     [SerializeField] Movement movementScript;
     [SerializeField] CameraController cameraController;
+    [SerializeField] Interactor interactor;
 
     private Vector2 movement;
     private Vector2 mouseMovement;
+    private bool interactPress;
+    private bool dropPress;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -23,11 +26,16 @@ public class InputManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
+        interactPress = playerInput.Player.InteractButton.WasPressedThisFrame();
+        dropPress = playerInput.Player.DropButton.WasPressedThisFrame();
         movementScript.ReciveInput(movement);
         cameraController.ReceiveInput(mouseMovement);
+        interactor.RecieveInput(interactPress, dropPress);
     }
 
     private void OnEnable()

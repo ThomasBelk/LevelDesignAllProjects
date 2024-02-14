@@ -53,6 +53,24 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InteractButton"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""f617b55b-f093-4d9b-aa38-565763855b02"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DropButton"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""066adf42-3dd2-4fdd-a146-a0277504e990"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +150,28 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""MouseY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fab575fa-0f7c-4251-9a7f-30c67ea738a6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InteractButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2cabde4b-1827-469e-88b7-181a8a1aca3c"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DropButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +183,8 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_MouseX = m_Player.FindAction("MouseX", throwIfNotFound: true);
         m_Player_MouseY = m_Player.FindAction("MouseY", throwIfNotFound: true);
+        m_Player_InteractButton = m_Player.FindAction("InteractButton", throwIfNotFound: true);
+        m_Player_DropButton = m_Player.FindAction("DropButton", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +247,8 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_MouseX;
     private readonly InputAction m_Player_MouseY;
+    private readonly InputAction m_Player_InteractButton;
+    private readonly InputAction m_Player_DropButton;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -212,6 +256,8 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @MouseX => m_Wrapper.m_Player_MouseX;
         public InputAction @MouseY => m_Wrapper.m_Player_MouseY;
+        public InputAction @InteractButton => m_Wrapper.m_Player_InteractButton;
+        public InputAction @DropButton => m_Wrapper.m_Player_DropButton;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -230,6 +276,12 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @MouseY.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
                 @MouseY.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
                 @MouseY.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
+                @InteractButton.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractButton;
+                @InteractButton.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractButton;
+                @InteractButton.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteractButton;
+                @DropButton.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDropButton;
+                @DropButton.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDropButton;
+                @DropButton.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDropButton;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -243,6 +295,12 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @MouseY.started += instance.OnMouseY;
                 @MouseY.performed += instance.OnMouseY;
                 @MouseY.canceled += instance.OnMouseY;
+                @InteractButton.started += instance.OnInteractButton;
+                @InteractButton.performed += instance.OnInteractButton;
+                @InteractButton.canceled += instance.OnInteractButton;
+                @DropButton.started += instance.OnDropButton;
+                @DropButton.performed += instance.OnDropButton;
+                @DropButton.canceled += instance.OnDropButton;
             }
         }
     }
@@ -252,5 +310,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
+        void OnInteractButton(InputAction.CallbackContext context);
+        void OnDropButton(InputAction.CallbackContext context);
     }
 }
