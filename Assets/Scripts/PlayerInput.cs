@@ -71,6 +71,24 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TurnPageRight"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""28632c1f-ee5f-4f58-8a15-97fe770e2c13"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TurnPageLeft"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""71414e4d-095e-44d8-98c1-13ab5307ece6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -153,23 +171,45 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fab575fa-0f7c-4251-9a7f-30c67ea738a6"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""InteractButton"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""2cabde4b-1827-469e-88b7-181a8a1aca3c"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""DropButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""222ef3b5-fcc2-4f63-8594-6e1451c4341d"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurnPageRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36412526-ca16-4427-8679-4827565ed627"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurnPageLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fab575fa-0f7c-4251-9a7f-30c67ea738a6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InteractButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -185,6 +225,8 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_MouseY = m_Player.FindAction("MouseY", throwIfNotFound: true);
         m_Player_InteractButton = m_Player.FindAction("InteractButton", throwIfNotFound: true);
         m_Player_DropButton = m_Player.FindAction("DropButton", throwIfNotFound: true);
+        m_Player_TurnPageRight = m_Player.FindAction("TurnPageRight", throwIfNotFound: true);
+        m_Player_TurnPageLeft = m_Player.FindAction("TurnPageLeft", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,6 +291,8 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_MouseY;
     private readonly InputAction m_Player_InteractButton;
     private readonly InputAction m_Player_DropButton;
+    private readonly InputAction m_Player_TurnPageRight;
+    private readonly InputAction m_Player_TurnPageLeft;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -258,6 +302,8 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @MouseY => m_Wrapper.m_Player_MouseY;
         public InputAction @InteractButton => m_Wrapper.m_Player_InteractButton;
         public InputAction @DropButton => m_Wrapper.m_Player_DropButton;
+        public InputAction @TurnPageRight => m_Wrapper.m_Player_TurnPageRight;
+        public InputAction @TurnPageLeft => m_Wrapper.m_Player_TurnPageLeft;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -282,6 +328,12 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @DropButton.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDropButton;
                 @DropButton.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDropButton;
                 @DropButton.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDropButton;
+                @TurnPageRight.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnPageRight;
+                @TurnPageRight.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnPageRight;
+                @TurnPageRight.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnPageRight;
+                @TurnPageLeft.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnPageLeft;
+                @TurnPageLeft.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnPageLeft;
+                @TurnPageLeft.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnPageLeft;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -301,6 +353,12 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @DropButton.started += instance.OnDropButton;
                 @DropButton.performed += instance.OnDropButton;
                 @DropButton.canceled += instance.OnDropButton;
+                @TurnPageRight.started += instance.OnTurnPageRight;
+                @TurnPageRight.performed += instance.OnTurnPageRight;
+                @TurnPageRight.canceled += instance.OnTurnPageRight;
+                @TurnPageLeft.started += instance.OnTurnPageLeft;
+                @TurnPageLeft.performed += instance.OnTurnPageLeft;
+                @TurnPageLeft.canceled += instance.OnTurnPageLeft;
             }
         }
     }
@@ -312,5 +370,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnMouseY(InputAction.CallbackContext context);
         void OnInteractButton(InputAction.CallbackContext context);
         void OnDropButton(InputAction.CallbackContext context);
+        void OnTurnPageRight(InputAction.CallbackContext context);
+        void OnTurnPageLeft(InputAction.CallbackContext context);
     }
 }

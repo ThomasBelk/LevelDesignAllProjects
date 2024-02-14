@@ -9,11 +9,14 @@ public class InputManager : MonoBehaviour
     [SerializeField] Movement movementScript;
     [SerializeField] CameraController cameraController;
     [SerializeField] Interactor interactor;
+    [SerializeField] private AutoFlip autoFlip;
 
     private Vector2 movement;
     private Vector2 mouseMovement;
     private bool interactPress;
     private bool dropPress;
+    private bool turnLeft;
+    private bool turnRight;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -33,9 +36,24 @@ public class InputManager : MonoBehaviour
     {
         interactPress = playerInput.Player.InteractButton.WasPressedThisFrame();
         dropPress = playerInput.Player.DropButton.WasPressedThisFrame();
+
+        if (PictureFrameBehavior.bookPickedUp)
+        {
+            turnRight = playerInput.Player.TurnPageRight.WasPerformedThisFrame();
+            turnLeft = playerInput.Player.TurnPageLeft.WasPerformedThisFrame();
+        }
+
         movementScript.ReciveInput(movement);
         cameraController.ReceiveInput(mouseMovement);
         interactor.RecieveInput(interactPress, dropPress);
+        if (turnRight)
+        {
+            autoFlip.FlipRightPage();
+        }
+        else if (turnLeft)
+        {
+            autoFlip.FlipLeftPage();
+        }
     }
 
     private void OnEnable()

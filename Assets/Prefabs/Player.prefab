@@ -252,6 +252,7 @@ MonoBehaviour:
   movementScript: {fileID: 8343268686593443515}
   cameraController: {fileID: 8343268686593443509}
   interactor: {fileID: 2056427741}
+  autoFlip: {fileID: 0}
 --- !u!114 &8343268686593443515
 MonoBehaviour:
   m_ObjectHideFlags: 0

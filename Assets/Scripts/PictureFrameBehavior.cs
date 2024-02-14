@@ -10,6 +10,8 @@ public class PictureFrameBehavior : MonoBehaviour, IInteractable
     [SerializeField] private float horizonatalHoldDistance = 0.5f;
     [SerializeField] private float pickupSpeed;
     [SerializeField] private Vector3 localRotation;
+    [SerializeField] private bool isBook = false;
+    public static bool bookPickedUp = false;
     private Vector3 initalPos;
     private Quaternion initalRotation;
     private Vector3 initalScale;
@@ -31,6 +33,10 @@ public class PictureFrameBehavior : MonoBehaviour, IInteractable
         gameObject.transform.parent = Camera.main.transform;
         transform.localPosition = new Vector3(horizonatalHoldDistance, verticalHoldDistance, holdDistance);
         transform.localRotation = Quaternion.Euler(localRotation);
+        if (isBook)
+        {
+            bookPickedUp = true;
+        }
     }
 
     public void Drop()
@@ -39,6 +45,7 @@ public class PictureFrameBehavior : MonoBehaviour, IInteractable
         transform.localScale = initalScale;
         transform.localPosition = initalPos;
         transform.localRotation = initalRotation;
+        bookPickedUp = false;
     }
 
 }
