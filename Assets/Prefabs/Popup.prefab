@@ -49,6 +49,7 @@ MonoBehaviour:
   speed: 4
   targetRotation: {x: 0, y: 0, z: 0}
   creeck: {fileID: 8300000, guid: 906d9f67d074e714f9041e7b2ff6cf27, type: 3}
+  isCivilian: 1
 --- !u!65 &2938029048834380555
 BoxCollider:
   m_ObjectHideFlags: 0
