@@ -6,8 +6,9 @@ using static UnityEngine.GraphicsBuffer;
 public class Shoot : MonoBehaviour
 {
     private Camera cam;
-    [SerializeField] float range = 100f;
-    [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] private float range = 100f;
+    [SerializeField] private ParticleSystem muzzleFlash;
+    [SerializeField] private AudioClip muzzleSound;
     private bool gunOnCooldown = false;
     private float cooldownTime;
 
@@ -32,6 +33,10 @@ public class Shoot : MonoBehaviour
         if (!gunOnCooldown)
         {
             muzzleFlash.Play();
+            if (muzzleSound != null)
+            {
+                AudioSource.PlayClipAtPoint(muzzleSound, transform.position);
+            }
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, range))
             {
                 Debug.Log(hit.transform.name); // Log the name of the object hit
