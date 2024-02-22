@@ -9,6 +9,7 @@ public class PopupBoard : MonoBehaviour
     private bool isInRange = false;
     private bool hasPlayedSound = false;
     [SerializeField] AudioClip creeck;
+    public bool isCivilian = true;
     // Start is called before the first frame update
 
     void Update()
