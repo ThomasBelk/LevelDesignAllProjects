@@ -8,13 +8,7 @@ public class PopupBoard : MonoBehaviour
     [SerializeField] Quaternion targetRotation;
     private bool isInRange = false;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    // Update is called once per frame
     void Update()
     {
         if (isInRange)
