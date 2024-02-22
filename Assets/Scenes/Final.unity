@@ -5200,6 +5200,11 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: -5.395713
       objectReference: {fileID: 0}
+    - target: {fileID: 2938029048834380556, guid: 10010847299269147b4efc3fae7d1bb2,
+        type: 3}
+      propertyPath: targetRotation.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 2938029048834380557, guid: 10010847299269147b4efc3fae7d1bb2,
         type: 3}
       propertyPath: m_RootOrder
@@ -21514,6 +21519,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2938029048834380556, guid: 10010847299269147b4efc3fae7d1bb2,
+        type: 3}
+      propertyPath: targetRotation.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2938029048834380557, guid: 10010847299269147b4efc3fae7d1bb2,
         type: 3}
       propertyPath: m_RootOrder
@@ -29401,6 +29411,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2938029048834380556, guid: 10010847299269147b4efc3fae7d1bb2,
+        type: 3}
+      propertyPath: targetRotation.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2938029048834380557, guid: 10010847299269147b4efc3fae7d1bb2,
         type: 3}
       propertyPath: m_RootOrder
@@ -41426,6 +41441,16 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: -5.2247524
       objectReference: {fileID: 0}
+    - target: {fileID: 2938029048834380556, guid: 10010847299269147b4efc3fae7d1bb2,
+        type: 3}
+      propertyPath: targetRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938029048834380556, guid: 10010847299269147b4efc3fae7d1bb2,
+        type: 3}
+      propertyPath: targetRotation.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2938029048834380557, guid: 10010847299269147b4efc3fae7d1bb2,
         type: 3}
       propertyPath: m_RootOrder
@@ -47619,17 +47644,17 @@ PrefabInstance:
     - target: {fileID: 2938029048834380556, guid: 10010847299269147b4efc3fae7d1bb2,
         type: 3}
       propertyPath: targetRotation.x
-      value: 0.44619775
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2938029048834380556, guid: 10010847299269147b4efc3fae7d1bb2,
         type: 3}
       propertyPath: targetRotation.y
-      value: 0.000000013834983
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 2938029048834380556, guid: 10010847299269147b4efc3fae7d1bb2,
         type: 3}
       propertyPath: targetRotation.z
-      value: -0.8949344
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2938029048834380557, guid: 10010847299269147b4efc3fae7d1bb2,
         type: 3}

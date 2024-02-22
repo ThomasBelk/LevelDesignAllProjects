@@ -5,7 +5,7 @@ using UnityEngine;
 public class PopupBoard : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
-    [SerializeField] Quaternion targetRotation;
+    [SerializeField] Vector3 targetRotation;
     private bool isInRange = false;
     private bool hasPlayedSound = false;
     [SerializeField] AudioClip creeck;
@@ -20,7 +20,7 @@ public class PopupBoard : MonoBehaviour
                 AudioSource.PlayClipAtPoint(creeck, transform.position);
                 hasPlayedSound = true;
             }
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(targetRotation), speed * Time.deltaTime);
         }
     }
 

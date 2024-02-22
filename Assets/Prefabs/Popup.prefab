@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  targetRotation: {x: 0.008726535, y: 0, z: 0, w: 0.9999619}
+  targetRotation: {x: 0, y: 0, z: 0}
   creeck: {fileID: 8300000, guid: 906d9f67d074e714f9041e7b2ff6cf27, type: 3}
 --- !u!65 &2938029048834380555
 BoxCollider:
