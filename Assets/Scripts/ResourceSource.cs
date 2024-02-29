@@ -11,6 +11,7 @@ public class ResourceSource : MonoBehaviour
     public FadingText fadingText;
     public int amount = 2;
     public int totalAmount;
+    public bool destoryAfterUse = false;
 
     public void GetResource()
     {
@@ -35,10 +36,11 @@ public class ResourceSource : MonoBehaviour
             totalAmount -= amount;
             resourceState.meatAmount += amount;
             fadingText.AddText("Meat", amount);
-            if (totalAmount < 0)
-            {
-                Destroy(gameObject);
-            }
+        }
+        resourceState.UpdateTotalsUI();
+        if (totalAmount < 0 && destoryAfterUse)
+        {
+            Destroy(gameObject);
         }
     }
 }

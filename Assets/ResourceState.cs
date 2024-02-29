@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ResourceState : MonoBehaviour
@@ -13,6 +15,7 @@ public class ResourceState : MonoBehaviour
     private bool hasBeenRepaired = false;
     public GameObject brokenBoat;
     public GameObject repairedBoat;
+    public TextMeshProUGUI totals;
 
     void Update()
     {
@@ -22,5 +25,12 @@ public class ResourceState : MonoBehaviour
             brokenBoat.SetActive(false);
             repairedBoat.SetActive(true);
         }
+    }
+
+    public void UpdateTotalsUI()
+    {
+        totals.text = "Wood " + woodAmount + "/" + maxWood + Environment.NewLine;
+        totals.text += "Rope " + ropeAmount + "/" + maxRope + Environment.NewLine;
+        totals.text += "Meat " + meatAmount + "/" + maxMeat;
     }
 }

@@ -180,6 +180,7 @@ MonoBehaviour:
   fadingText: {fileID: 0}
   amount: 2
   totalAmount: 0
+  destoryAfterUse: 1
 --- !u!4 &9222139108687119853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0b8c978347e3ad84f94a40d892642124,
