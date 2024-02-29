@@ -123,6 +123,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34043610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1333447562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &34043615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34043610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
 --- !u!1001 &111065268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +155,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8343268686593443508, guid: 192954f8b056ed541b11bd4e7a53608f,
+        type: 3}
+      propertyPath: collector
+      value: 
+      objectReference: {fileID: 2125923808}
     - target: {fileID: 8343268686593443513, guid: 192954f8b056ed541b11bd4e7a53608f,
         type: 3}
       propertyPath: m_RootOrder
@@ -190,8 +220,88 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8343268686593443519, guid: 192954f8b056ed541b11bd4e7a53608f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 192954f8b056ed541b11bd4e7a53608f, type: 3}
+--- !u!1 &131605269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 66f0726e43c72a94aa9dc7aa4b6cbfe0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538906631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &131605274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131605269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
+--- !u!1 &188439927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003401154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &188439932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188439927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
+--- !u!1 &266241550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: eec2a0a67f1c8b243a386ec359eda522,
+    type: 3}
+  m_PrefabInstance: {fileID: 791491169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &266241555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266241550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
 --- !u!1 &359160888
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Type5 02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eec2a0a67f1c8b243a386ec359eda522, type: 3}
+      propertyPath: m_TagString
+      value: Resource
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eec2a0a67f1c8b243a386ec359eda522, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -422,6 +536,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec2a0a67f1c8b243a386ec359eda522, type: 3}
+--- !u!1 &474976574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 20daf9d902df0d749bd16ac37a353854,
+    type: 3}
+  m_PrefabInstance: {fileID: 519058387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &474976579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474976574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
 --- !u!1001 &519058387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -432,6 +571,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 20daf9d902df0d749bd16ac37a353854, type: 3}
       propertyPath: m_Name
       value: Tree Type4 02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20daf9d902df0d749bd16ac37a353854, type: 3}
+      propertyPath: m_TagString
+      value: Resource
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20daf9d902df0d749bd16ac37a353854, type: 3}
       propertyPath: m_RootOrder
@@ -502,6 +645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Type5 04
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b, type: 3}
+      propertyPath: m_TagString
+      value: Resource
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -571,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Type0 05
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c8fd0d31d77530344baa4b459b8e221e, type: 3}
+      propertyPath: m_TagString
+      value: Resource
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c8fd0d31d77530344baa4b459b8e221e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -629,6 +780,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8fd0d31d77530344baa4b459b8e221e, type: 3}
+--- !u!1 &633832186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: eec2a0a67f1c8b243a386ec359eda522,
+    type: 3}
+  m_PrefabInstance: {fileID: 900295525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &633832191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633832186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
 --- !u!850595691 &698682688
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -780,6 +956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Type5 02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eec2a0a67f1c8b243a386ec359eda522, type: 3}
+      propertyPath: m_TagString
+      value: Resource
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eec2a0a67f1c8b243a386ec359eda522, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -849,6 +1029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Type5 02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eec2a0a67f1c8b243a386ec359eda522, type: 3}
+      propertyPath: m_TagString
+      value: Resource
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eec2a0a67f1c8b243a386ec359eda522, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -917,6 +1101,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b, type: 3}
       propertyPath: m_Name
       value: Tree Type5 04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b, type: 3}
+      propertyPath: m_TagString
+      value: Resource
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b, type: 3}
       propertyPath: m_RootOrder
@@ -1073,6 +1261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabe2a3442635774f9da2642bdd7f1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  woodAmount: 0
+  meatAmount: 0
+  ropeAmount: 0
 --- !u!4 &1274397077
 Transform:
   m_ObjectHideFlags: 0
@@ -1189,6 +1380,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1297000229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c8fd0d31d77530344baa4b459b8e221e,
+    type: 3}
+  m_PrefabInstance: {fileID: 624263047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297000234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297000229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
 --- !u!1001 &1333447562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1199,6 +1415,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b, type: 3}
       propertyPath: m_Name
       value: Tree Type5 04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b, type: 3}
+      propertyPath: m_TagString
+      value: Resource
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b, type: 3}
       propertyPath: m_RootOrder
@@ -1269,6 +1489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Type6 04
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 66f0726e43c72a94aa9dc7aa4b6cbfe0, type: 3}
+      propertyPath: m_TagString
+      value: Resource
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 66f0726e43c72a94aa9dc7aa4b6cbfe0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1327,6 +1551,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f0726e43c72a94aa9dc7aa4b6cbfe0, type: 3}
+--- !u!1 &1590854104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 2ab8bbefc4a0d4948b52fdcbd7c3489b,
+    type: 3}
+  m_PrefabInstance: {fileID: 607381947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1590854109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590854104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
 --- !u!1 &1870352361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1590,7 @@ GameObject:
   - component: {fileID: 1870352362}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1437,9 +1686,10 @@ GameObject:
   - component: {fileID: 1888130179}
   - component: {fileID: 1888130178}
   - component: {fileID: 1888130177}
+  - component: {fileID: 1888130181}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1522,6 +1772,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20.782}
+--- !u!114 &1888130181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888130176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 1
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 2
+--- !u!1 &2020976937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: eec2a0a67f1c8b243a386ec359eda522,
+    type: 3}
+  m_PrefabInstance: {fileID: 433571621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2020976942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020976937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032a18c4c150249aec7905944f4ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWood: 1
+  isRope: 1
+  isMeat: 0
+  resourceState: {fileID: 1274397076}
+  fadingText: {fileID: 2080161446}
+  amount: 2
+  totalAmount: 6
 --- !u!1 &2080161444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,11 +1850,11 @@ RectTransform:
   m_Father: {fileID: 1282439554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 5, y: -5}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &2080161446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,8 +1916,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1672,3 +1966,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080161444}
   m_CullTransparentMesh: 1
+--- !u!1 &2125923803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8343268685462587451, guid: 192954f8b056ed541b11bd4e7a53608f,
+    type: 3}
+  m_PrefabInstance: {fileID: 111065268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2125923808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125923803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f088e9c6ef680499ebda9a9e9cf660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceDistance: 5

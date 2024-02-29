@@ -19,6 +19,12 @@ public class FadingText : MonoBehaviour
         }
     }
 
+    public void AddText(String s, int i)
+    {
+        textMeshPro.text += s +  " x" + i + Environment.NewLine;
+        StartCoroutine(RemoveTopLineAfterDelay(2));
+    }
+
     private IEnumerator RemoveTopLineAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);

@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
     private PlayerInput playerInput;
     [SerializeField] Movement movementScript;
     [SerializeField] CameraController cameraController;
+    [SerializeField] private ResourceCollector collector;
 
     private Vector2 movement;
     private Vector2 mouseMovement;
@@ -28,6 +29,7 @@ public class InputManager : MonoBehaviour
     {
         movementScript.ReciveInput(movement);
         cameraController.ReceiveInput(mouseMovement);
+        collector.SetIsInteracting(playerInput.Player.Interact.WasPerformedThisFrame());
     }
 
     private void OnEnable()
