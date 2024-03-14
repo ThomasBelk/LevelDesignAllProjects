@@ -1676,6 +1676,66 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &183238985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183238988}
+  - component: {fileID: 183238987}
+  - component: {fileID: 183238986}
+  m_Layer: 0
+  m_Name: Footsteps Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &183238986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183238985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c4b4f8fdc1687429ab4363ed3cb17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicPlayer: {fileID: 1059748797}
+  music: {fileID: 8300000, guid: 41695a995aa2e124a8fc5670b0846249, type: 3}
+--- !u!65 &183238987
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183238985}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.73367393, z: 1}
+  m_Center: {x: 1.2872148e-11, y: 0.13316396, z: 0}
+--- !u!4 &183238988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183238985}
+  m_LocalRotation: {x: -0.7078878, y: 0.70632493, z: -0, w: 0}
+  m_LocalPosition: {x: -6.4299974, y: 2.04, z: -15.91}
+  m_LocalScale: {x: 7.0907, y: 19.088, z: 11.757014}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 71
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &215055957
 GameObject:
   m_ObjectHideFlags: 0
@@ -12813,7 +12873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059748796}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -13, y: 5.775, z: -7.07}
+  m_LocalPosition: {x: -15.46, y: 5.775, z: -7.07}
   m_LocalScale: {x: 0.21148811, y: 1, z: 0.43660825}
   m_ConstrainProportionsScale: 0
   m_Children: []
