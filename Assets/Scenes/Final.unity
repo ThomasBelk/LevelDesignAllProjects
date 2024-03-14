@@ -10997,7 +10997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicPlayer: {fileID: 543450652168059562}
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 93e95dd4ba963d649993e50af05b5513, type: 3}
 --- !u!65 &932462299
 BoxCollider:
   m_ObjectHideFlags: 0
