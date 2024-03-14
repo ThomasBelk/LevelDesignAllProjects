@@ -365,7 +365,7 @@ Material:
     - _UVSec: 0
     - _UV_Offset_X: 0
     - _UV_Offset_Y: 0
-    - _UV_Rotation: 0
+    - _UV_Rotation: 90
     - _UV_Tiling: 1
     - _UV_Tiling_X: 1
     - _UV_Tiling_Y: 1
